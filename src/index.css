@@ -259,6 +259,11 @@ a {
   max-width: 550px;
   height: auto;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+[data-theme='dark'] .hero-illustration {
+  filter: invert(1) hue-rotate(200deg) drop-shadow(0 10px 20px rgba(255, 255, 255, 0.1));
 }
 
 
