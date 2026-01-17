@@ -119,19 +119,9 @@ a {
   color: var(--text-secondary);
 }
 
-/* Work Experience Tweaks */
-.work-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5rem;
-}
 
-.work-company {
+.nav-links a:hover {
   color: var(--accent-color);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1rem;
 }
 
 .contact-section {
@@ -158,25 +148,6 @@ a {
   margin-bottom: 2rem;
   color: var(--text-secondary);
   font-size: 1.1rem;
-}
-
-.work-duration {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-  background: rgba(0, 0, 0, 0.05);
-  /* Light bg for duration badge */
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-}
-
-[data-theme='dark'] .work-duration {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-
-.nav-links a:hover {
-  color: var(--accent-color);
 }
 
 .theme-toggle {

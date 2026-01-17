@@ -9,7 +9,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             </div>
             <ul className="nav-links">
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#work-experience">Work Experiences</a></li>
+                <li><a href="#projects">Work Experiences</a></li>
                 <li><a href="#opensource">Open Source</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#blogs">Blogs</a></li>
