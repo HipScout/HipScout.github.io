@@ -17,16 +17,16 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-socials">
-                        <a href="#" className="social-icon" aria-label="GitHub"><FaGithub /></a>
-                        <a href="#" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
+                        <a href="https://github.com/HipScout" className="social-icon" aria-label="GitHub"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/debjyoti-das-66b370205/" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
                         <a href="#" className="social-icon" aria-label="Google"><FaGoogle /></a>
                         <a href="#" className="social-icon" aria-label="GitLab"><FaGitlab /></a>
-                        <a href="#" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
+                        <a href="https://www.facebook.com/debjyotid.kvsalua/" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
                     </div>
 
                     <div className="hero-buttons">
                         <a href="#contact" className="btn btn-primary">Contact Me</a>
-                        <a href="#resume" className="btn btn-secondary">See My Resume</a>
+                        <a href="https://docs.google.com/document/d/167KT4GRwj4dx_c_bjmVhhDGY0Nw9PNFSQfZA6UQwPqg/edit?pli=1&tab=t.0" className="btn btn-secondary">See My Resume</a>
                     </div>
                 </div>
 
