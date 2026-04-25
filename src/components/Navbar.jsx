@@ -6,14 +6,19 @@ const Navbar = ({ theme, toggleTheme }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const scrollToSection = (hash) => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+    };
+
     const handleNavClick = (e, hash) => {
+        e.preventDefault();
         if (location.pathname !== '/') {
-            e.preventDefault();
             navigate('/');
-            setTimeout(() => {
-                const el = document.querySelector(hash);
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+            // Wait for MainPage to mount before scrolling
+            setTimeout(() => scrollToSection(hash), 300);
+        } else {
+            scrollToSection(hash);
         }
     };
 
