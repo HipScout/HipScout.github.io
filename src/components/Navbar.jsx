@@ -30,7 +30,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <ul className="nav-links">
                 <li><a href="#skills" onClick={(e) => handleNavClick(e, '#skills')}>Skills</a></li>
                 <li><a href="#projects" onClick={(e) => handleNavClick(e, '#projects')}>Work Experiences</a></li>
-                <li><a href="#opensource" onClick={(e) => handleNavClick(e, '#opensource')}>Open Source</a></li>
+                <li><a href="https://github.com/HipScout" target="_blank" rel="noopener noreferrer">Open Source</a></li>
                 <li><a href="#achievements" onClick={(e) => handleNavClick(e, '#achievements')}>Achievements</a></li>
                 <li><a href="#blogs" onClick={(e) => handleNavClick(e, '#blogs')}>Blogs</a></li>
                 <li><a href="#talks" onClick={(e) => handleNavClick(e, '#talks')}>Talks</a></li>
