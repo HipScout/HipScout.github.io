@@ -14,12 +14,9 @@ import './index.css';
 
 function MainPage() {
   const heroRef = useRef(null);
-  const [showSplash, setShowSplash] = useState(() => {
-    return !sessionStorage.getItem('splashShown');
-  });
+  const [showSplash, setShowSplash] = useState(true);
 
   const handleBootComplete = () => {
-    sessionStorage.setItem('splashShown', 'true');
     setShowSplash(false);
     if (heroRef.current) {
       heroRef.current.scrollIntoView({ behavior: 'smooth' });
