@@ -12,7 +12,7 @@ const Contact = () => {
                         DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.
                     </p>
                     <p className="contact-bio">
-                        Full Stack Software Developer | UI/UX Enthusiast
+                        Full Stack Software Developer | Traveller
                     </p>
                     <div className="contact-socials">
                         <a href="https://github.com/HipScout" className="social-icon" aria-label="GitHub"><FaGithub /></a>

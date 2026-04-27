@@ -7,11 +7,10 @@ const About = () => {
             <h2 className="section-title">About <span className="gradient-text">Me</span></h2>
             <div className="about-content">
                 <p>
-                    Hello! I'm a passionate developer who loves to create things that live on the internet.
-                    My interest in web development started back in 2020 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS is fun!
+                    Hello! I'm Debjyoti — an ORMB (Oracle Revenue Management and Billing) Developer with 4+ years of hands-on experience building and optimizing enterprise-grade billing and revenue management solutions. I specialize in designing scalable architectures, writing complex business logic, and streamlining billing workflows for large-scale telecom and utility clients.
                 </p>
                 <p>
-                    Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio.
+                    Beyond ORMB, I bring strong expertise in Java Full Stack development — working across Spring Boot, Microservices, REST APIs, Hibernate, and relational databases — as well as React Native Full Stack development, crafting cross-platform mobile applications with seamless backend integration. I thrive at the intersection of enterprise systems and modern application development, delivering end-to-end solutions that are robust, performant, and user-centric.
                 </p>
             </div>
         </section>
