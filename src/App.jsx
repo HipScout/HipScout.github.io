@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -12,12 +12,11 @@ import SplashScreen from './components/SplashScreen';
 import TravelPost from './pages/TravelPost';
 import './index.css';
 
-function MainPage() {
+function MainPage({ showSplash, onBootComplete }) {
   const heroRef = useRef(null);
-  const [showSplash, setShowSplash] = useState(true);
 
   const handleBootComplete = () => {
-    setShowSplash(false);
+    onBootComplete();
     if (heroRef.current) {
       heroRef.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -42,6 +41,7 @@ function App() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -52,13 +52,22 @@ function App() {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
+  const handleBootComplete = useCallback(() => {
+    setShowSplash(false);
+  }, []);
+
+  const resetSplash = useCallback(() => {
+    window.scrollTo(0, 0);
+    setShowSplash(true);
+  }, []);
+
   return (
     <Router>
       <div className="app-container">
         <ParticlesBackground theme={theme} />
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Navbar theme={theme} toggleTheme={toggleTheme} resetSplash={resetSplash} />
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage showSplash={showSplash} onBootComplete={handleBootComplete} />} />
           <Route path="/travel/:slug" element={<TravelPost />} />
         </Routes>
       </div>

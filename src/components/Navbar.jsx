@@ -2,7 +2,7 @@ import avatar from '../assets/ava.jpg';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = ({ theme, toggleTheme, resetSplash }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -22,10 +22,15 @@ const Navbar = ({ theme, toggleTheme }) => {
         }
     };
 
+    const handleLogoClick = () => {
+        if (resetSplash) resetSplash();
+        navigate('/');
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <div className="logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>&lt;Debjyoti /&gt;</div>
+                <div className="logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>&lt;Debjyoti /&gt;</div>
             </div>
             <ul className="nav-links">
                 <li><a href="#skills" onClick={(e) => handleNavClick(e, '#skills')}>Skills</a></li>
